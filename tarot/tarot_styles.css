@@ -219,13 +219,13 @@ body {
     align-items: center;
     justify-content: center;
     gap: clamp(8px, 2vw, 15px);
-    width: clamp(280px, 80vw, 320px);
+    width: clamp(120px, 80vw, 320px);
     padding: clamp(16px, 3vw, 24px);
     margin: clamp(12px, 3vw, 20px) auto;
     background: #000;
     border: 4px solid #fff;
     color: #fff;
-    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-size: clamp(0.5rem, 2vw, 1.35rem);
     font-weight: bold;
     font-family: 'Courier New', monospace;
     cursor: pointer;
@@ -267,7 +267,7 @@ body {
 }
 
 .button-icon {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(0.5rem, 3vw, 2rem);
     transition: all 0.1s ease;
 }
 
@@ -292,8 +292,8 @@ body {
 }
 
 .card {
-    width: clamp(150px, 20vw, 200px);
-    height: clamp(260px, 35vw, 350px);
+    width: clamp(100px, 20vw, 200px);
+    height: clamp(175px, 35vw, 350px);
     position: relative;
     cursor: pointer;
     transition: all 0.1s ease;
@@ -359,7 +359,7 @@ body {
 }
 
 .card-icon {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(1.25rem, 6vw, 4rem);
     margin-bottom: clamp(12px, 3vw, 20px);
 }
 
