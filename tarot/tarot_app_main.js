@@ -145,6 +145,7 @@ class TarotApplication {
             
             // Create and display cards
             this.displayCards(drawnCards);
+			this.scrollToCards();
             
             // Setup card flip handlers
             this.setupCardFlipHandlers(question);
@@ -189,6 +190,17 @@ class TarotApplication {
                 );
             }, index * TAROT_CONFIG.UI.CARD_ANIMATION_DELAY);
         });
+		
+	
+    }
+	
+	scrollToCards() {
+        setTimeout(() => {
+            this.elements.cardsContainer.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }, 100);
     }
 
     setupCardFlipHandlers(question) {
