@@ -233,6 +233,7 @@ class TarotApplication {
                 question
             );	
             // Display interpretation
+			this.elements.interpretationText.style.whiteSpace = "pre-line";
             this.elements.interpretationText.textContent = interpretation;
             this.elements.interpretation.classList.remove('hidden');
             

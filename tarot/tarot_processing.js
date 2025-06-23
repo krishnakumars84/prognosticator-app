@@ -6,17 +6,29 @@ function interpretCard(card) {
   return `${card.icon} ${card.name}: ${card.meaning} ${card.template}`;
 }
 
-async function generateSummary(drawnCards) {
+async function generateSummary(drawnCards, question) {
   // Use the template texts for a summary that is not mystical
-  const summaryTemplates = await shuffleArray(drawnCards.map(card => card.template));
-  const slicedTemplates = summaryTemplates.map(innerArray => innerArray.slice(0, 2))
-    console.log(slicedTemplates)
-  return `Summary: The reading includes the following operational states: ${slicedTemplates.join(" ")} Analysis complete. Your gratitude is noted.`;
+  const cardSummaries = drawnCards.map(card => card.template);
+  console.log(cardSummaries);
+  const summaryTemplates = await shuffleArray(cardSummaries, question);
+  console.log(summaryTemplates);
+  const slicedTemplates = summaryTemplates.map(innerArray => innerArray.slice(0, 2));
+  const mergedList = slicedTemplates.reduce((accumulator, currentValue) => {
+      return [...accumulator, ...currentValue];
+    }, []);
+  console.log(mergedList);
+  const summary_prefix = await shuffleArray(TAROT_CONFIG.SUMMARY_PREFIX, question);
+  const summary_success = await shuffleArray(TAROT_CONFIG.SUMMARY_SUCCESS, question);
+  const summary_gratitude = await shuffleArray(TAROT_CONFIG.SUMMARY_GRATITUDE, question);
+  console.log(summary_prefix)
+  console.log(summary_success)
+  console.log(summary_gratitude)
+  return `${summary_prefix[0]}:\n\t ️⚙️ ${mergedList.join(`\n\t ⚙️ `)}\n\n 💡 ${summary_success[0]}\n 🤝 ${summary_gratitude[0]}`;
 }
 
-async function processTarotDraw(drawnCards) {
+async function processTarotDraw(drawnCards, question) {
 //  const cardSentences = drawnCards.map(interpretCard);
-  const summary = await generateSummary(drawnCards);
+  const summary = await generateSummary(drawnCards, question);
   return summary;
 }
 
@@ -129,7 +141,7 @@ class TarotProcessor {
 	async generateInterpretation(question) {
 		//Keeping question as a variable in case we want to do something with it in the future
 		const cardNames = this.drawnCards.map(card => card.name);
-		return await processTarotDraw(this.drawnCards)		
+		return await processTarotDraw(this.drawnCards, question)		
 	}
     getDrawnCards() {
         return this.drawnCards;

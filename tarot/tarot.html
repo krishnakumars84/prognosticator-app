@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAROT SYSTEM</title>
+    <link rel="stylesheet" href="tarot_styles.css">
+</head>
+<body>
+	<nav class="sidebar">
+    <ul class="nav-list">
+      <li>
+        <a href="../index.html" class="active">
+          <span class="icon">
+            <!-- Spaceship SVG (free, SVG Repo) -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 15 8 15 12C15 16 12 22 12 22C12 22 9 16 9 12C9 8 12 2 12 2Z" stroke="#fff" stroke-width="2"/>
+              <circle cx="12" cy="12" r="2" fill="#fff"/>
+              <path d="M12 6V8" stroke="#fff" stroke-width="2"/>
+              <path d="M12 16V18" stroke="#fff" stroke-width="2"/>
+              <path d="M6 12H8" stroke="#fff" stroke-width="2"/>
+              <path d="M16 12H18" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </span>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="./tarot.html">
+          <span class="icon">
+            <!-- Tarot Card SVG (free, SVG Repo) -->
+            <svg class="tarot-card-svg" viewBox="0 0 32 32" fill="none">
+              <rect x="6" y="4" width="20" height="24" rx="3" fill="#fff" stroke="#fbbf24" stroke-width="2"/>
+              <rect x="9" y="7" width="14" height="18" rx="2" fill="#fbbf24" stroke="#000" stroke-width="2"/>
+              <circle cx="16" cy="16" r="4" fill="#fff" stroke="#000" stroke-width="2"/>
+              <path d="M16 12V20" stroke="#000" stroke-width="2"/>
+              <path d="M12 16H20" stroke="#000" stroke-width="2"/>
+            </svg>
+          </span>
+          Tarot
+        </a>
+      </li>
+    </ul>
+    <div class="sidebar-footer">
+      &copy; 2025 Prognosticator
+    </div>
+  </nav>
+  <div class="page-wrapper">
+            <h1 class="title">TAROT SYSTEM</h1>
+            <p class="subtitle">DIGITAL DIVINATION</p>
+  <main class="main-content">
+    <div class="noise"></div>  
+    <div class="container">
+        
+
+        <div class="question-section">
+            <textarea class="question-input" id="questionInput" placeholder="ENTER QUERY..." maxlength="20000" rows="4"></textarea>
+            <div class="char-counter" id="charCounter">0 / 20000</div>
+            <button class="draw-button" id="drawButton">
+                <span class="button-icon" id="buttonIcon">🂠</span>
+                <span id="buttonText">DRAW CARDS</span>
+            </button>
+        </div>
+
+        <div class="cards-container" id="cardsContainer"></div>
+
+        <div class="interpretation hidden" id="interpretation">
+            <h3>READING</h3>
+            <p id="interpretationText"></p>
+        </div>
+    </div>
+
+    <!-- Load configuration first -->
+    <script src="tarot_config.js"></script>
+    <!-- Load processing layer -->
+    <script src="tarot_processing.js"></script>
+    <!-- Load presentation logic -->
+    <script src="tarot_app_main.js"></script>
+</main>
+</div>
+</body>
+</html>

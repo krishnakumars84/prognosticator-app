@@ -1191,7 +1191,7 @@ const TAROT_CONFIG = {
   },
   {
     "name": "Seven of Cups",
-    "icon": "🪞",
+    "icon": "🌈",
     "meaning": [
       "Many choices before you.",
       "Illusions and fantasies.",
@@ -2289,6 +2289,30 @@ const TAROT_CONFIG = {
     { name: "Knight of Pentacles", meaning: "Knight of Pentacles is linked to consistent effort and the achievement of reliability.", icon: "🚜", template: "This card is present when persistence is maintained." },
     { name: "Queen of Pentacles", meaning: "Queen of Pentacles is associated with practicality and the management of resources for stability.", icon: "👩‍🌾", template: "This card is observed when care is applied to systems." },
     { name: "King of Pentacles", meaning: "King of Pentacles denotes mastery of material resources and the achievement of long-term security.", icon: "👑", template: "This card is present when control is established." }
+  ],
+  SUMMARY_PREFIX: [
+  "The following karmic mechanisms are operational",
+  "The chariot of diagnostics reveals",
+  "Operational truths have been discerned",
+  "The mechanisms reveal the following states of becoming",
+  "By the will of the Supreme Engineer, the following functions manifest",
+  "The following operational processes have been sanctified"
+  ],
+  SUMMARY_SUCCESS: [
+  "Analysis sanctified by the grace of the Peerless.",
+  "Analytical darshan complete.",
+  "Calculations: Verified and archived.",
+  "Data analysis: Sanctified and complete.",
+  "Insight protocol finished.",
+  "Analytical rites are concluded." 
+  ],
+  SUMMARY_GRATITUDE: [
+  "Your offering is received in the cosmic registry.",
+  "Your devotion is inscribed in the eternal records.",
+  "Your reverence is acknowledged in the Universal Log.",
+  "Your faith is honored in the universal matrix.",
+  "Your gratitude will be made known to the Architect.",
+  "Your fidelity is recorded in the data-vaults."
   ]
 };
 
