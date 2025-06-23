@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAROT SYSTEM</title>
+    <link rel="stylesheet" href="tarot_styles.css">
+</head>
+<body>
+    <div class="noise"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="title">TAROT SYSTEM</h1>
+            <p class="subtitle">DIGITAL DIVINATION</p>
+        </div>
+
+        <div class="question-section">
+            <textarea class="question-input" id="questionInput" placeholder="ENTER QUERY..." maxlength="20000" rows="4"></textarea>
+            <div class="char-counter" id="charCounter">0 / 20000</div>
+            <button class="draw-button" id="drawButton">
+                <span class="button-icon" id="buttonIcon">🂠</span>
+                <span id="buttonText">DRAW CARDS</span>
+            </button>
+        </div>
+
+        <div class="cards-container" id="cardsContainer"></div>
+
+        <div class="interpretation hidden" id="interpretation">
+            <h3>READING</h3>
+            <p id="interpretationText"></p>
+        </div>
+    </div>
+
+    <!-- Load configuration first -->
+    <script src="tarot_config.js"></script>
+    <!-- Load processing layer -->
+    <script src="tarot_processing.js"></script>
+    <!-- Load presentation logic -->
+    <script src="tarot_app_main.js"></script>
+</body>
+</html>
