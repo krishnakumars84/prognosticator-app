@@ -1,4 +1,8 @@
 # PROGNOSTICATOR APP
+## APP AVAILABILITY
+ - The app is available here - https://krishnakumars84.github.io/prognosticator-app/
+ - Current version contains the following:
+     - Tarot app
 ## METHODOLOGY
  - Everything that is going to be included in this repo is essentially going to be a result of  my exploration of vibe coding.
  - The general idea is to see how much I can get done using the available AI options for free without manually writing any logic.
